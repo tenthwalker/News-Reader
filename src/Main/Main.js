@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import ArticlePre from '../Article/ArticlePre.js';
+import React from 'react';
+import Article from '../Article/Article.js';
 import { v4 as uuid } from "uuid";
 
-export default function Main({articles}) {
+export default function Main({articles, isExp, toggleExp}) {
   const articleList = articles.map((article) => (
-    <ArticlePre
+    <Article
       key={uuid().slice(0, 8)}
       id={uuid().slice(0, 8)}
       source={article.source.name}
@@ -15,6 +15,8 @@ export default function Main({articles}) {
       urlToImage={article.urlToImage}
       publishedAt={article.publishedAt}
       content={article.content}
+      isExp={isExp}
+      toggleExp={toggleExp}
     />
   ));
 

@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import NotFound from '../Error/Error.js';
 import './App.css';
 import fakeData from '../MockData.js';
 import Main from '../Main/Main.js'
-import ArticleFull from '../Article/ArticleFull.js';
 
 function App() {
-
+  const [isExp, setExp] = useState([]);
   const [articles, setArticles] = useState([]);
   const url = 'https://newsapi.org/v2/top-headlines?';
 
@@ -16,6 +13,38 @@ function App() {
     console.log(response)
     setArticles(response)
   }  
+
+  function toggleExp(selectedArt) {
+    console.log(selectedArt, "inside toggle, selected Article")
+    const isInList = isExp.find(article => article.title === selectedArt.title)
+    isInList ? handleCollapse(selectedArt) : handleExpand(selectedArt);
+    return isInList
+  }
+
+  function handleCollapse(selectedArt) {
+    function shrinkExp() {
+      if(isExp.length === 1){
+        setExp([]);
+      } else {
+        const filteredArticles = isExp.filter(article => article.title !== selectedArt.title); 
+        setExp(filteredArticles);
+      }
+    }
+    shrinkExp();
+  };
+
+  function handleExpand(selectedArt) {
+    function showMore() {
+      const checkArt = isExp.find(article => article.title === selectedArt.title);
+      if(checkArt === undefined) {
+        selectedArt.exp = true;
+        setExp([...isExp, selectedArt]);
+        return isExp;
+      };
+    }; 
+    showMore();
+    return isExp;
+  }
 
   useEffect(() => {
     getArticles()
@@ -27,20 +56,7 @@ function App() {
         <h1>News Reader</h1>
       </header>
       <main>
-        <Routes>
-          <Route
-            path="/"
-            element={<Main articles={articles}/>}
-          />
-          <Route
-            path="/article/:id"  
-            element={<ArticleFull />}
-          />
-          <Route
-            path="*"
-            element={<NotFound />}
-          />
-        </Routes>
+        <Main articles={articles} isExp={isExp} toggleExp={toggleExp}/>
       </main>
     </div>
   );
