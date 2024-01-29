@@ -27,5 +27,5 @@ export default function Article({
         <p>{source.name}</p>
         <button onClick={() => toggleExp(selectedArt)}>{selectedArt.exp ? "See less" : "See more"}</button>
       </div>
-  )
+  );
 }

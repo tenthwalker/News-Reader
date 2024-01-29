@@ -25,5 +25,5 @@ export default function Main({articles, isExp, toggleExp}) {
     <section className='article-list'>
       {articleList}
     </section>
-  )
+  );
 }

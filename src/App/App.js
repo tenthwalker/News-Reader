@@ -23,7 +23,7 @@ function App() {
         setError('There was an error with the fetch')
         alert(`Server Error: ${error.message}`)
       })
-  }  
+  };
 
   function toggleSort() {
     if (isChrono) {
@@ -40,13 +40,13 @@ function App() {
       setArticles(reverseTime)
     }
     return articles
-  }
+  };
 
   function toggleExp(selectedArt) {
     const isInList = isExp.find(article => article.title === selectedArt.title)
     isInList ? handleCollapse(selectedArt) : handleExpand(selectedArt);
     return isInList
-  }
+  };
 
   function handleCollapse(selectedArt) {
     function shrinkExp() {
@@ -56,7 +56,7 @@ function App() {
         const filteredArticles = isExp.filter(article => article.title !== selectedArt.title); 
         setExp(filteredArticles);
       }
-    }
+    };
     shrinkExp();
   };
 
@@ -71,7 +71,7 @@ function App() {
     }; 
     showMore();
     return isExp;
-  }
+  };
 
   useEffect(() => {
     getArticles()

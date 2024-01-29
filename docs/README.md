@@ -24,15 +24,15 @@ Created by [Arden Ranta](https://github.com/tenthwalker).
 - [Wins](#wins)
 - [Future Ideas](#future-ideas)
 
-<h2  id="overview">🌐 Overview </h2>
+<h2 id="overview">🌐 Overview </h2>
 
 *Overview*
 
 ----
 
-<h2  id="getting-started">🗂️ Getting Started </h2>
+<h2 id="getting-started">🗂️ Getting Started </h2>
 
-1. Fork or clone down this respository. 
+1. Fork or clone down this repository. 
 2. In the terminal, open this app by running the command `cd <project folder name>`
 3. Run the command  `npm install` to install React dependencies, as well as `npm install uuidv4` to get the random value generator.
 4. Run the command `npm start` to start the server.
@@ -40,12 +40,12 @@ Created by [Arden Ranta](https://github.com/tenthwalker).
 6. You can also view the project <a href="https://tenthwalker.github.io/News-Reader/">here</a>.
 7. Use `control C` to stop the server.
 
-<h2  id="preview"> 🎥 Desktop Preview 📱 </h2>
+<h2 id="preview"> 🎥 Desktop Preview 📱 </h2>
 <details>
 
 ![macbooknews](https://gist.github.com/assets/139941423/2c2f5c72-eef3-4b0d-ab94-103d22434a30)
 
-<h2  id="preview"> 📱 Mobile and Tablet Views </h2>
+<h2 id="preview"> 📱 Mobile and Tablet Views </h2>
 
 ![ipadnews](https://gist.github.com/assets/139941423/689c2916-b520-4b0c-bbd5-8e259899a1bf)
 
@@ -53,11 +53,11 @@ Created by [Arden Ranta](https://github.com/tenthwalker).
 
 </details>
 
-<h2  id="wins">💪🏻 Wins </h2>
+<h2 id="wins">💪🏻 Wins </h2>
 - Came together quickly
 - Toggle functions are a breeze now
 - API integrated much more smoothly than I expected
 
-<h2  id="future-ideas">💡 Future Ideas </h2>
+<h2 id="future-ideas">💡 Future Ideas </h2>
 - Sort by country
 - External link to articles
