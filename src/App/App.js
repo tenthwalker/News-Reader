@@ -23,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>News Reader</h1>
       </header>
       <main>
         <Main articles={articles}/>

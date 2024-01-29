@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Article from '../Article/Article.js';
+import ArticlePre from '../Article/ArticlePre.js';
 import { v4 as uuid } from "uuid";
 
-const newId = uuid().slice(0, 8);
-
 export default function Main({articles}) {
-  
   const articleList = articles.map((article) => (
-    <Article
+    <ArticlePre
       key={uuid().slice(0, 8)}
       id={uuid().slice(0, 8)}
       source={article.source.name}
