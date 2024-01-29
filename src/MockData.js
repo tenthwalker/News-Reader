@@ -1,7 +1,7 @@
 const fakeData = 
   {
-    // "status": "ok",
-    // "totalResults": 38,
+    "status": "ok",
+    "totalResults": 38,
     "articles": [
         {
             "source": {

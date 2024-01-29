@@ -7,3 +7,18 @@
   border: 5px solid black;
   padding: 5px;
 }
+
+@media screen and (max-width: 1000px) {
+  .article {
+    margin-left: 1em;
+    margin-right: 1em;
+    max-width: 20em;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .article {
+    max-height: 20em;
+    max-width: 20em;
+  }
+}

@@ -20,7 +20,7 @@ export default function Article({
   return (
       <div className='article' >
         <h2>{title}</h2>
-        <img src={urlToImage} />
+        <img src={urlToImage} alt="color photo accompanying news article" />
         <p>{publishedAt}</p>
         {selectedArt.exp ? <p>{content}</p> : <p>{description}</p>}
         <p>{author}</p>

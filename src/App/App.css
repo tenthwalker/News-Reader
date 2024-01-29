@@ -1,14 +1,9 @@
-.App {
-  /* text-align: center; */
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  margin: 0.33em;
 }
 
 .App-header {
+  padding: 1em;
   background-color: black;
   display: flex;
   flex-direction: column;
