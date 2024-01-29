@@ -4,6 +4,7 @@ import NotFound from '../Error/Error.js';
 import './App.css';
 import fakeData from '../MockData.js';
 import Main from '../Main/Main.js'
+import ArticleFull from '../Article/ArticleFull.js';
 
 function App() {
 
@@ -26,7 +27,20 @@ function App() {
         <h1>News Reader</h1>
       </header>
       <main>
-        <Main articles={articles}/>
+        <Routes>
+          <Route
+            path="/"
+            element={<Main articles={articles}/>}
+          />
+          <Route
+            path="/article/:id"  
+            element={<ArticleFull />}
+          />
+          <Route
+            path="*"
+            element={<NotFound />}
+          />
+        </Routes>
       </main>
     </div>
   );
