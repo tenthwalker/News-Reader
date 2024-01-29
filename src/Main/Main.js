@@ -1,6 +1,7 @@
 import React from 'react';
 import Article from '../Article/Article.js';
 import { v4 as uuid } from "uuid";
+import "./Main.css";
 
 export default function Main({articles, isExp, toggleExp}) {
   const articleList = articles.map((article) => (

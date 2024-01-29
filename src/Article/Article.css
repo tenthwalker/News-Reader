@@ -1,0 +1,9 @@
+.article {
+  display: flex;
+  max-height: 20em;
+  max-width: 15em;
+  flex-direction: column;
+  overflow-y: scroll;
+  border: 5px solid black;
+  padding: 5px;
+}
