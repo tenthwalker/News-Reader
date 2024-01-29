@@ -1,18 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import fakeData from '../MockData.js';
 import Main from '../Main/Main.js'
 
 function App() {
   const [isExp, setExp] = useState([]);
   const [isChrono, setChrono] = useState(true);
   const [articles, setArticles] = useState([]);
-  const url = 'https://newsapi.org/v2/top-headlines?';
+  const [error, setError] = useState('');
+  const url = 'https://newsapi.org/v2/top-headlines?country=us';
 
   function getArticles() {
-    const response = fakeData.articles
-    console.log(response)
-    setArticles(response)
+    fetch(url, {
+      headers: {
+        'X-Api-Key': '671cec5e971f4bfba51e71e563b6c10e'
+      }
+    })
+    .then(response => response.json())
+    .then(data => setArticles(data.articles))
+    .catch(error => 
+      {
+        console.error("There was a problem with the fetch operation:", error)
+        setError('There was an error with the fetch')
+        alert(`Server Error: ${error.message}`)
+      })
   }  
 
   function toggleSort() {
@@ -79,6 +89,7 @@ function App() {
         <button onClick={() => toggleSort()}>{isChrono ? "sort oldest to newest" : "sort newest to oldest"}</button>
       </header>
       <main>
+        {error && <h2>No news is good news, right? Try again in a bit.</h2>}
         <Main articles={articles} isExp={isExp} toggleExp={toggleExp}/>
       </main>
     </div>
