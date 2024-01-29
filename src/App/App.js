@@ -26,22 +26,17 @@ function App() {
   }  
 
   function toggleSort() {
-    console.log("toggle")
-    console.log(isChrono)
-    console.log(articles, "inside toggle articles")
     if (isChrono) {
       setChrono(false)
       const trueTime = articles.sort((a, b)=> {
         return new Date(a.publishedAt)- new Date(b.publishedAt)
       })
-      console.log(trueTime, "trueTime")
       setArticles(trueTime)
     } else {
       setChrono(true)
       const reverseTime = articles.sort((a, b)=> {
         return new Date(b.publishedAt)- new Date(a.publishedAt)
       })
-      console.log(reverseTime, "reverseTime")
       setArticles(reverseTime)
     }
     return articles
