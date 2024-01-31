@@ -1,8 +1,6 @@
 <h1 align=center> News Reader </h1>
 
 <div align="center">
-    
-<a href="https://tenthwalker.github.io/News-Reader/" style="font-size: 30px;">Deployed Link</a>
 
 Created by [Arden Ranta](https://github.com/tenthwalker).
 
