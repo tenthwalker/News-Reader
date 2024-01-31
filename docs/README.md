@@ -43,13 +43,13 @@ Created by [Arden Ranta](https://github.com/tenthwalker).
 <h2 id="preview"> 🎥 Desktop Preview 📱 </h2>
 <details>
 
-![macbooknews](https://gist.github.com/assets/139941423/2c2f5c72-eef3-4b0d-ab94-103d22434a30)
+![macbooknews](https://github.com/tenthwalker/News-Reader/assets/139941423/213a961b-d799-4d7c-b9ef-c0f3ab3b6079)
 
 <h2 id="preview"> 📱 Mobile and Tablet Views </h2>
 
-![ipadnews](https://gist.github.com/assets/139941423/689c2916-b520-4b0c-bbd5-8e259899a1bf)
+![ipadnews](https://github.com/tenthwalker/News-Reader/assets/139941423/ae311486-8543-4801-be88-cf186b5c04b3)
 
-![iphonenews](https://gist.github.com/assets/139941423/b070b3d1-c3cf-4691-a6d7-666611d3de4a)
+![iphonenews](https://github.com/tenthwalker/News-Reader/assets/139941423/286981e2-0370-4d5d-901f-7394976a0714)
 
 </details>
 
